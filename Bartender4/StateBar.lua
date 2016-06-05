@@ -103,10 +103,12 @@ local DefaultStanceMap = setmetatable({}, { __index = function(t,k)
             { id = "vanish", name = GetSpellInfo(1856), index = -1},
 			{ id = "stealth", name = GetSpellInfo(1784), index = 1 },
 		}
+	--[[ Shadowform doesn't exist post-Legion and priests don't have a stance bar.
 	elseif k == "PRIEST" then
 		newT = {
 			{ id = "shadowform", name = GetSpellInfo(15473), index = 1 },
 		}
+	--]]
 	elseif k == "WARLOCK" then
 		newT = {
 			{ id = "metamorphosis", name = GetSpellInfo(103958), index = 1, type = "form"},
